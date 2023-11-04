@@ -1,0 +1,11 @@
+.correct-answer {
+  font-weight: bold;
+
+}
+
+.submitted-answer {
+ color: blue;
+ width: 50%;
+ display: flex;
+ justify-content: space-evenly;
+}

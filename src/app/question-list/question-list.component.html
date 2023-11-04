@@ -1,0 +1,17 @@
+<div *ngFor="let question of allQuestions">
+  <h3>{{ question.question }}</h3>
+
+  <div>
+    <p class="submitted-answer">
+      <span [ngClass]="{'correct-answer': question.correctAnswer == '1'}">{{ question.answer1 }}</span>
+      <span [ngClass]="{'correct-answer': question.correctAnswer == '2'}">{{ question.answer2 }}</span>
+      <span [ngClass]="{'correct-answer': question.correctAnswer == '3'}">{{ question.answer3 }}</span>
+      <span [ngClass]="{'correct-answer': question.correctAnswer == '4'}">{{ question.answer4 }}</span>
+    </p>
+
+    <button (click)="deleteQuestion(question)">Delete Question</button>
+
+  </div>
+
+
+  </div>

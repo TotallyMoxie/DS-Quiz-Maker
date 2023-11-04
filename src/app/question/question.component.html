@@ -1,0 +1,36 @@
+<form action="create-form">
+  <div class="form-group">
+    <label for="question"></label>
+    <input type="text" class="form-control" id="question" placeholder="Enter question" [(ngModel)]="newQuestion.question" name="question">
+  </div>
+
+  <div class="button-container">
+    <div class="bubble-button">
+        <input type="text" id="input1" placeholder="Input 1" [(ngModel)]="newQuestion.answer1" name="answer1">
+        <input type="radio" name="answer" [(ngModel)]="newQuestion.correctAnswer"value="1">
+    </div>
+    <div class="bubble-button">
+        <input type="text" id="input2" placeholder="Input 2" [(ngModel)]="newQuestion.answer2" name="answer2">
+        <input type="radio" name="answer" [(ngModel)]="newQuestion.correctAnswer"value="2">
+    </div>
+    <div class="bubble-button">
+        <input type="text" id="input3" placeholder="Input 3" [(ngModel)]="newQuestion.answer3" name="answer3">
+        <input type="radio" name="answer"[(ngModel)]="newQuestion.correctAnswer"value="3">
+    </div>
+    <div class="bubble-button">
+      <input type="text" id="input4" placeholder="Input 4" [(ngModel)]="newQuestion.answer4" name="answer4">
+      <input type="radio" name="answer"[(ngModel)]="newQuestion.correctAnswer"value="4">
+    </div>
+  </div>
+
+  <div class="submit-form">
+    <button type="submit" (click)="onSubmit()" [disabled]="!newQuestion.isValid() || isDisable()" >Add Question</button>
+  </div>
+  <div class="delete-question">
+    <button type="reset">Reset</button>
+  </div>
+</form>
+
+
+
+
