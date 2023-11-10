@@ -9,7 +9,8 @@ import { AdminQuiz } from './admin-quiz.model';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'improved-quiz-maker';
+/*   title = 'improved-quiz-maker';
+  quizToCreate: AdminQuiz = new AdminQuiz();
 
   constructor(private quizService: QuizService) { }
 
@@ -19,6 +20,6 @@ export class AppComponent {
   }
 
   onSaveQuiz() {
-    this.quizService.saveQuiz();
-  }
+    this.quizService.saveQuiz(this.quizToCreate);
+  } */
 }

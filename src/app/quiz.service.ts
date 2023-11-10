@@ -11,6 +11,8 @@ export class QuizService {
 allQuestions : Question[] = [];
 isDisabled : boolean = true;
 adminQuiz: AdminQuiz[] = [];
+newQuestion: Question = new Question();
+quizToCreate: AdminQuiz = new AdminQuiz();
 
   constructor() {
    }
@@ -25,8 +27,8 @@ adminQuiz: AdminQuiz[] = [];
     this.allQuestions.splice(this.allQuestions.indexOf(question), 1);
   }
 
-  saveQuiz() {
-    this.adminQuiz.push(new AdminQuiz());
+  saveQuiz(newQuiz: Question) {
+    this.allQuestions.push(newQuiz);
   }
 
 

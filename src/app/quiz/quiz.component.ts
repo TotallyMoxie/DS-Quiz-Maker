@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { AdminQuiz } from '../admin-quiz.model';
 
 @Component({
@@ -7,7 +7,7 @@ import { AdminQuiz } from '../admin-quiz.model';
   styleUrls: ['./quiz.component.css']
 })
 export class QuizComponent {
-  quizTitle = '';
+  @Input() newQuiz: AdminQuiz = new AdminQuiz();
 
 
 

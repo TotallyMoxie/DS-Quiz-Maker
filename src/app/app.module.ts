@@ -9,6 +9,7 @@ import { QuestionComponent } from './question/question.component';
 import { NgModule } from '@angular/core';
 import { QuestionListComponent } from './question-list/question-list.component';
 import { QuizListComponent } from './quiz-list/quiz-list.component';
+import { NewQuizComponent } from './new-quiz/new-quiz.component';
 
 
 
@@ -18,7 +19,8 @@ import { QuizListComponent } from './quiz-list/quiz-list.component';
     QuizComponent,
     QuestionComponent,
     QuestionListComponent,
-    QuizListComponent
+    QuizListComponent,
+    NewQuizComponent
   ],
 
   imports: [
