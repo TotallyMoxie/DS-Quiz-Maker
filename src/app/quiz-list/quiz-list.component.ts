@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { AdminQuiz } from '../admin-quiz.model';
 import { QuizService } from '../quiz.service';
 
 
@@ -19,10 +18,13 @@ export class QuizListComponent {
   }
 
   onSaveQuiz() {
-
-    this.quizservice.adminQuiz.push(this.quizservice.quizToCreate);
+    this.quizservice.saveQuiz();
+    this.quizservice.clearOnSave();
   }
 
 
+  onDeleteQuiz() {
+    this.quizservice.deleteQuiz();
+  }
 
 }

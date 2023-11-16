@@ -1,9 +1,6 @@
-Get Clear Form to Work
+Move Title form to appear with Save button, and can only save once title is added. 
 
-make parent component for form and quiz.....same thing
-
-databind all the parts so that they are connected
+click event to add the title box //its on the button but not the title box
 
 make it look pretty *sparkles*
 
-make header

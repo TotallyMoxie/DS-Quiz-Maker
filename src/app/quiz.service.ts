@@ -8,11 +8,14 @@ import { AdminQuiz } from './admin-quiz.model';
 })
 
 export class QuizService {
-allQuestions : Question[] = [];
-isDisabled : boolean = true;
-adminQuiz: AdminQuiz[] = [];
-newQuestion: Question = new Question();
-quizToCreate: AdminQuiz = new AdminQuiz();
+  allQuestions : Question[] = [];
+  isDisabled : boolean = true;
+  adminQuiz: AdminQuiz[] = [];
+  newQuestion: Question = new Question();
+  quizToCreate: AdminQuiz = new AdminQuiz();
+
+  wasAdded : boolean = false;
+
 
   constructor() {
    }
@@ -27,15 +30,18 @@ quizToCreate: AdminQuiz = new AdminQuiz();
     this.allQuestions.splice(this.allQuestions.indexOf(question), 1);
   }
 
-  saveQuiz(newQuiz: Question) {
-    this.allQuestions.push(newQuiz);
+  saveQuiz() {
+    this.adminQuiz.push(this.quizToCreate);
+    this.quizToCreate = new AdminQuiz();
   }
 
+  clearOnSave() {
+    this.allQuestions.splice(0, this.allQuestions.length);
+  }
 
+  deleteQuiz() {
+    this.allQuestions.splice(0, this.allQuestions.length);
+  }
 
-    /* deleteQuiz() {
-    this.allQuiz.splice(0, this.allQuiz.length);
-
-  } */
 
 }

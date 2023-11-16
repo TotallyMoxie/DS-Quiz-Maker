@@ -8,9 +8,9 @@ import { QuizService } from '../quiz.service';
   styleUrls: ['./question-list.component.css']
 })
 export class QuestionListComponent {
-  allQuestions : Question[] = []
 
-  constructor(private quizservice: QuizService) { this.allQuestions = this.quizservice.allQuestions; }
+
+  constructor(public quizservice: QuizService) { this.quizservice.allQuestions = this.quizservice.allQuestions; }
 
   deleteQuestion(question : Question) {
     this.quizservice.deleteQuestion(question);

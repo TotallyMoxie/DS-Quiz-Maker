@@ -1,5 +1,7 @@
-<form action="">
-  <input type="text" placeholder="title" [(ngModel)]="newQuiz.quizTitle" name = "quizTitle">
-</form>
+<div *ngIf="submitQuiz()">
+  <form action="">
+    <input type="text" placeholder="title" [(ngModel)]="quizservice.quizToCreate.quizTitle" name = "quizTitle" >
+  </form>
+</div>
 
 

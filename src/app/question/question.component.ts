@@ -9,19 +9,20 @@ import { QuizService } from '../quiz.service';
   styleUrls: ['./question.component.css']
 })
 export class QuestionComponent {
-  newQuestion: Question = new Question();
 
-
-  constructor(private quizService:QuizService) { }
+  constructor(public quizService:QuizService) { }
 
   onSubmit() {
-    this.quizService.addQuestion(this.newQuestion);  // this is for Add Question
-    this.newQuestion = new Question();
-    console.log(this.newQuestion);
+    this.quizService.addQuestion(this.quizService.newQuestion);
+    this.quizService.newQuestion = new Question();
+    console.log(this.quizService.newQuestion);
   }
 
   isDisable() {
     return this.quizService.allQuestions.length >= 10;
+  }
+  wasAdded() {
+    this.quizService.wasAdded = true;
   }
 
 }

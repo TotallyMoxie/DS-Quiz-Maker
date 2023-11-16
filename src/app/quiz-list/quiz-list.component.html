@@ -1,18 +1,20 @@
-<div *ngFor="let quizTitle of quizservice.adminQuiz">
-  <h3>{{ quizTitle.quizTitle }}</h3>
 
-
-
-</div>
 
 <div *ngIf="quizSubmit()">
-  <button class="delete-quiz">
+  <button class="delete-quiz" (click)="onDeleteQuiz()">
     Delete
   </button>
   <button class="save-quiz" (click)="onSaveQuiz()">
     Save
   </button>
 </div>
+
+<div *ngFor="let quizTitle of quizservice.adminQuiz">
+ <button> <h3>{{ quizTitle.quizTitle }}</h3></button>
+</div>
+
+
+
 
 
 

@@ -10,6 +10,7 @@ import { NgModule } from '@angular/core';
 import { QuestionListComponent } from './question-list/question-list.component';
 import { QuizListComponent } from './quiz-list/quiz-list.component';
 import { NewQuizComponent } from './new-quiz/new-quiz.component';
+import { HeaderComponent } from './header/header.component';
 
 
 
@@ -20,7 +21,8 @@ import { NewQuizComponent } from './new-quiz/new-quiz.component';
     QuestionComponent,
     QuestionListComponent,
     QuizListComponent,
-    NewQuizComponent
+    NewQuizComponent,
+    HeaderComponent
   ],
 
   imports: [

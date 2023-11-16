@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { AdminQuiz } from '../admin-quiz.model';
+import { QuizService } from '../quiz.service';
 
 @Component({
   selector: 'app-quiz',
@@ -7,8 +8,12 @@ import { AdminQuiz } from '../admin-quiz.model';
   styleUrls: ['./quiz.component.css']
 })
 export class QuizComponent {
-  @Input() newQuiz: AdminQuiz = new AdminQuiz();
 
 
 
+  submitQuiz() {
+
+  }
+
+  constructor(public quizservice: QuizService) { this.quizservice.quizToCreate = this.quizservice.quizToCreate; }
 }

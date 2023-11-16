@@ -1,7 +1,6 @@
 import { Question } from "./question.model";
 
 
-
 export class AdminQuiz {
 
   quizTitle: string;
